@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>30 ton - archiwum notowań</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+  <header class="container">
+    <hgroup>
+      <h1>30 ton</h1>
+      <h2>Archiwum notowań</h2>
+    </hgroup>
+  </header>
+
+  <main class="container">
+    <!-- Wybór notowania -->
+    <nav class="grid">
+      <select id="chart-select" name="chart-select">
+        <option value="132" selected>Notowanie #132 - 15.03.2023</option>
+        <option value="131">Notowanie #131 - 08.03.2023</option>
+        <option value="130">Notowanie #130 - 01.03.2023</option>
+        <option value="129">Notowanie #129 - 22.02.2023</option>
+      </select>
+    
+      <fieldset role="group">
+        <button class="secondary outline">« Poprzednie</button>
+        <button class="secondary outline">Następne »</button>
+      </fieldset>
+
+    </nav>
+    
+    <!-- Lista utworów -->
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Artysta</th>
+          <th scope="col">Utwór</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Dawid Podsiadło</td>
+          <td>Mori</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Brodka</td>
+          <td>Game Change</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Hania Rani</td>
+          <td>Hello</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Sokół</td>
+          <td>Obraz</td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>Daria Zawiałow</td>
+          <td>Złoty wiek</td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td>Taco Hemingway</td>
+          <td>Gelato</td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td>Kwiat Jabłoni</td>
+          <td>Byłominęło</td>
+        </tr>
+        <tr>
+          <th scope="row">8</th>
+          <td>Ralph Kaminski</td>
+          <td>Kosmiczne energie</td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </main>
+</body>
+</html>
