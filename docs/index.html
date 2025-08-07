@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>30 ton - archiwum notowań</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <!-- Include Alpine.js -->
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body x-data="chartData()">
+  <header class="container">
+    <hgroup>
+      <h1>30 ton</h1>
+      <h2>Archiwum notowań</h2>
+    </hgroup>
+  </header>
+
+  <main class="container">
+    <!-- Wybór notowania -->
+    <nav class="grid">
+      <select id="chart-select" name="chart-select" x-model="selectedChartIndex" @change="selectChart()">
+        <template x-for="(chart, index) in charts" :key="index">
+          <option :value="index" x-text="formatChartOption(chart, index)"></option>
+        </template>
+      </select>
+    
+      <fieldset role="group">
+        <button class="secondary outline" @click="previousChart()" :disabled="!hasPreviousChart">« Poprzednie</button>
+        <button class="secondary outline" @click="nextChart()" :disabled="!hasNextChart">Następne »</button>
+      </fieldset>
+    </nav>
+    
+    <div x-show="isLoading" class="container">
+      <progress></progress>
+      <p class="text-center">Wczytywanie danych...</p>
+    </div>
+    
+    <!-- Lista utworów -->
+    <table x-show="!isLoading && currentChart">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Utwór</th>
+          <th scope="col">Artysta</th>
+        </tr>
+      </thead>
+      <tbody>
+        <template x-for="(song, index) in currentChart.songs" :key="index">
+          <tr class="secondary"
+              role="link" 
+              tabindex="0"
+              @click="searchSong(song)" 
+              @keydown.enter="searchSong(song)"
+              @keydown.space.prevent="searchSong(song)">
+            <th scope="row" x-text="index + 1"></th>
+            <td x-text="song.title || '---'"></td>
+            <td x-text="song.artist || '---'"></td>
+          </tr>
+        </template>
+      </tbody>
+    </table>
+    
+  </main>
+</body>
+</html>
