@@ -1,8 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+  <style>
+    :root {
+      --bg-top-color: #DD2C00;
+      --bg-bottom-color: #D50000;
+    }
+
+    @media (prefers-color-scheme:dark) {
+      :root {
+        --bg-top-color: #FF6E40;
+        --bg-bottom-color: #FF5252;
+      }
+    }
+  </style>
   <defs>
     <linearGradient id="a" x1="15%" x2="85%" y1="15%" y2="85%">
-      <stop stop-color="#ff5722" />
-      <stop offset="1" stop-color="#f44336" />
+      <stop stop-color="var(--bg-top-color)" />
+      <stop offset="1" stop-color="var(--bg-bottom-color)" />
     </linearGradient>
   </defs>
   <path
