@@ -48,14 +48,14 @@
         </tr>
       </thead>
       <tbody>
-        <template x-for="(song, index) in currentChart.songs" :key="index">
+        <template x-for="song in currentChart.songs" :key="song.position">
           <tr class="secondary"
               role="link" 
               tabindex="0"
               @click="searchSong(song)" 
               @keydown.enter="searchSong(song)"
               @keydown.space.prevent="searchSong(song)">
-            <th scope="row" x-text="index + 1"></th>
+            <th scope="row" x-text="song.position"></th>
             <td x-text="song.title || '---'"></td>
             <td x-text="song.artist || '---'"></td>
           </tr>
