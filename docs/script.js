@@ -42,10 +42,6 @@ function chartData() {
             if (this.selectedChartIndex >= 0 && this.selectedChartIndex < this.charts.length) {
                 this.currentChart = this.charts[this.selectedChartIndex];
                 
-                // Filter out any songs with null titles
-                if (this.currentChart && this.currentChart.songs) {
-                    this.currentChart.songs = this.currentChart.songs.filter(song => song.title);
-                }
             } else {
                 this.currentChart = null;
             }
