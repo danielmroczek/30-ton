@@ -7,7 +7,7 @@ Celem projektu jest zebranie danych wszystkich notowań listy przebojów *30 ton
 ## Demo
 Wypróbuj: [30 ton – archiwum notowań](https://danielmroczek.github.io/30-ton/)
 
-## Powstanie projktu
+## Powstanie projektu
 Od najmłodszych lat lubiłem oglądać listę 30 ton — urzekały mnie forma, sposób prowadzenia i, oczywiście, muzyka. Z biegiem czasu moja pasja tylko rosła, a jej źródeł upatruję właśnie w tej liście.
 
 Po latach postanowiłem uhonorować jej miejsce w moim życiu. Choć w sieci można znaleźć archiwalne notowania, dotarcie do nich bywa żmudne. Stworzyłem więc aplikację, która ułatwia dostęp do tych materiałów.
